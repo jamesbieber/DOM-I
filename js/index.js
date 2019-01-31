@@ -39,6 +39,7 @@ const siteContent = {
 
 
 var temp;
+var tempTexts;
 
 // LOOP FOR SETTING NAV BAR
 for(let i = 0; i < 6; i++) {
@@ -64,5 +65,34 @@ img.setAttribute('src', siteContent["nav"]["img-src"]);
 // CIRCLE IMG
 img = document.getElementById("cta-img");
 img.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// FEATURES / HEADINGS
+temp = document.querySelectorAll('h4');
+temp[0].textContent = siteContent["main-content"]["features-h4"];
+temp[1].textContent = siteContent["main-content"]["about-h4"];
+temp[2].textContent = siteContent["main-content"]["services-h4"];
+temp[3].textContent = siteContent["main-content"]["product-h4"];
+temp[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// MIDDLE IMG
+img = document.getElementById("middle-img");
+img.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// TEXT CONTENTS
+tempTexts = document.querySelectorAll('p');
+tempTexts[0].textContent = siteContent["main-content"]["features-content"];
+tempTexts[1].textContent = siteContent["main-content"]["about-content"];
+tempTexts[2].textContent = siteContent["main-content"]["services-content"];
+tempTexts[3].textContent = siteContent["main-content"]["product-content"];
+tempTexts[4].textContent = siteContent["main-content"]["vision-content"];
+
+// FOOTER/CONTACT
+temp[5].textContent = siteContent["contact"]["contact-h4"];
+
+tempTexts[5].textContent = siteContent["contact"]["address"];
+tempTexts[6].textContent = siteContent["contact"]["phone"];
+tempTexts[7].textContent = siteContent["contact"]["email"];
+
+tempTexts[8].textContent = siteContent["footer"]["copyright"];
 
 

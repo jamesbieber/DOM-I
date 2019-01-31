@@ -37,6 +37,32 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+var temp;
+
+// LOOP FOR SETTING NAV BAR
+for(let i = 0; i < 6; i++) {
+  var nav = document.querySelectorAll('a');
+  nav[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
+  nav[i].setAttribute('href', '#', siteContent["nav"]["nav-item-" + (i + 1)]);
+}
+
+// DOM IS AWESOME 
+temp = document.querySelector('h1');
+temp.textContent = siteContent["cta"]["h1"];
+temp.setAttribute('h1', siteContent["cta"]["h1"]);
+
+// BUTTON "GET STARTED"
+temp = document.querySelector('button');
+temp.textContent = siteContent["cta"]["button"];
+temp.setAttribute('button', siteContent["cta"]["button"]);
+
+// GREAT IDEA IMG
+var img = document.getElementById("logo-img");
+img.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// CIRCLE IMG
+img = document.getElementById("cta-img");
+img.setAttribute('src', siteContent["cta"]["img-src"]);
+
+

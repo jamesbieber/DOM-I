@@ -42,11 +42,29 @@ var temp;
 var tempTexts;
 
 // LOOP FOR SETTING NAV BAR
+var nav = document.querySelector('nav');
+
+var staff = document.createElement('a');
+staff.setAttribute('href', '#');
+staff.textContent = "Staff";
+staff.style.color = "green";
+nav.appendChild(staff);
+
+var gallery = document.createElement('a');
+gallery.setAttribute('href', '#');
+gallery.textContent = "Gallery";
+gallery.style.color = "green";
+nav.appendChild(gallery);
+
+
+nav = document.querySelectorAll('a');
+
 for(let i = 0; i < 6; i++) {
-  var nav = document.querySelectorAll('a');
   nav[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
-  nav[i].setAttribute('href', '#', siteContent["nav"]["nav-item-" + (i + 1)]);
+  nav[i].style.color = 'green';
 }
+
+
 
 // DOM IS AWESOME 
 temp = document.querySelector('h1');
